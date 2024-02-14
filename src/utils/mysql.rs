@@ -4,6 +4,6 @@ use crate::GLOBAL_DB;
 pub async fn init_db() {
     GLOBAL_DB.link(
         rbdc_mysql::driver::MysqlDriver {},
-        "mysql://root:123456@localhost/ry-vue",
+        "mysql://root:123456@localhost/resources",
     ).await.expect("数据库连接失败");
 }
